@@ -1,0 +1,24 @@
+<div>
+<div>Product List component</div>
+<table>
+    <thead>
+    <tr>
+        <td>Product id</td>
+        <td>Product name</td>
+    </tr>
+</thead>
+<tbody>
+    <ng-container *ngFor="let pro of listproducts; trackBy: trackById">
+    <tr *ngIf='showtitle'>
+        <td>{{pro.id}}</td>
+        <td>{{pro.name}}</td>
+    </tr>
+</ng-container>
+</tbody>
+</table>
+<button (click)="refresh()" class="btn btn-primary">Refresh</button>
+<button (click)="showhidetitle()" class="btn btn-primary">{{showtitle ? 'showtitle' : 'hidetitle'}}</button>
+<h1>{{myinput}}</h1>
+<button (click)="senddata()">Send</button>
+<ng-content></ng-content>
+</div>
