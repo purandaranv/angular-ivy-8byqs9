@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+<p ng-appMyDirective>My full name is {{getFullName()}}</p>
+<p>My Name: {{getFullName()}}</p>
+<p><button [disabled]="isDisabled">Click Me</button></p>
+<p>{{firstName | TitlePipe: 'Male'}}</p>
+<product-list [myinput]='inputvar' (myoutput)='getdata($event)'>
+text: <input type="text" value="Good" id="id2">   
+</product-list>
+<app-forms></app-forms>
